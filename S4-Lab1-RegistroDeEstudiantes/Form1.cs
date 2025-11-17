@@ -1,5 +1,7 @@
 using Microsoft.VisualBasic;
 using System.Text.Json;
+using System.Text.RegularExpressions;
+
 
 namespace S4_Lab1_RegistroDeEstudiantes
 {
@@ -87,6 +89,57 @@ namespace S4_Lab1_RegistroDeEstudiantes
 
         private void SubMenu_guardar_Click(object sender, EventArgs e)
         {
+            // VALIDACION DE CAMPOS VACIO
+            if (string.IsNullOrWhiteSpace(tbxNombre.Text) ||
+                string.IsNullOrWhiteSpace(tbxCedula.Text) ||
+                string.IsNullOrWhiteSpace(tbxUsuario.Text) ||
+                string.IsNullOrWhiteSpace(tbxPassword.Text) ||
+                string.IsNullOrWhiteSpace(tbxConfirmacion.Text) ||
+                cbxCarrera.SelectedIndex == -1 ||
+                cbx_Semestre.SelectedIndex == -1 ||
+                (rbMatutina.Checked == false && rbVespertina.Checked == false))
+            {
+                MessageBox.Show("Uno de los campos está vacío.", "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            //  VALIDACIÓN NOMBRE SIN SIMBOLOS
+            foreach (char c in tbxNombre.Text)
+            {
+                if (!char.IsLetter(c) && !char.IsWhiteSpace(c))
+                {
+                    MessageBox.Show("El nombre no puede contener símbolos.", "Dato ilógico",
+                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+            }
+            //CANTIDAD MÁXIMA DE CARACTERES
+            if (tbxNombre.Text.Length > 30)
+            {
+                MessageBox.Show("El nombre excede el límite permitido (30 caracteres).",
+                    "Dato ilógico", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            // VALIDACION DEL FORMATO DE LA CEDULA
+            string patron = @"^\d+-\d+-\d+$";
+
+            if (!Regex.IsMatch(tbxCedula.Text, patron))
+            {
+                MessageBox.Show("La cédula debe contener números separados por guiones. Ejemplos válidos:\n2-755-39\n02-0755-000039",
+                    "Dato ilógico", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            //VALIDACIÓN PASSWORD 
+            if (tbxPassword.Text != tbxConfirmacion.Text)
+            {
+                MessageBox.Show("La contraseña y la confirmación no coinciden.",
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            
+
+            //CARGAR O CREAR LA LISTA
             ListaDeEstudiantes data;
 
             if (File.Exists("Lista de estudiantes.json"))
@@ -96,13 +149,13 @@ namespace S4_Lab1_RegistroDeEstudiantes
             }
             else
             {
-                // Si el archivo no existe, se crea uno base
                 data = new ListaDeEstudiantes()
                 {
                     estudiantes = new List<Estudiante>()
                 };
             }
 
+            // CREAR EL NUEVO OBJETO
             Estudiante nuevo = new Estudiante()
             {
                 nombre = tbxNombre.Text,
@@ -111,20 +164,22 @@ namespace S4_Lab1_RegistroDeEstudiantes
                 semestre = int.Parse(cbx_Semestre.SelectedItem.ToString()),
                 jornada = rbMatutina.Checked ? "Matutina" : "Vespertina",
                 usuario = tbxUsuario.Text,
-                password = tbxPassword.Text 
+                password = tbxPassword.Text
             };
 
             data.estudiantes.Add(nuevo);
 
+          //SE GUARDA EL ARCHIVO
             var opciones = new JsonSerializerOptions
             {
-                WriteIndented = true // para formatearlo bonito
+                WriteIndented = true
             };
 
             string nuevoJson = JsonSerializer.Serialize(data, opciones);
-
             File.WriteAllText("Lista de estudiantes.json", nuevoJson);
 
+            MessageBox.Show("Registro guardado correctamente.", "Éxito",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void SubMenu_salir_Click(object sender, EventArgs e)
