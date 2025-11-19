@@ -8,7 +8,7 @@ namespace S4_Lab1_RegistroDeEstudiantes
 {
     public partial class Form1 : Form
     {
-        //password
+        //password hola
         string valor;
         string codigo = "admin123";
 

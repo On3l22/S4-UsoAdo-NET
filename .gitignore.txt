@@ -1,0 +1,75 @@
+# ========================================
+#   VISUAL STUDIO / C# OFFICIAL GITIGNORE
+# ========================================
+
+# Build results
+bin/
+obj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]og/
+[Ll]ogs/
+
+# Visual Studio files
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Visual Studio auto generated files
+Generated\ Files/
+
+# Backup & Cache
+*.cache
+*.db
+*.db-shm
+*.db-wal
+
+# Rider / ReSharper
+.idea/
+*.DotSettings.user
+
+# NuGet packages
+*.nupkg
+packages/
+*.snupkg
+*.nuspec
+
+# .NET-specific
+project.lock.json
+project.fragment.lock.json
+artifacts/
+*.deps.json
+*.runtimeconfig.json
+
+# ASP.NET / IIS
+App_Data/
+
+# Others
+*.log
+*.tmp
+*.bak
+*.swp
+*.psess
+*.vsp
+*.vspscc
+*_i.c
+*_p.c
+*_h.h
+
+# Test results
+TestResults/
+*.trx
+*.coverage
+*.coveragexml
+
+# Publish folder
+publish/
+out/
+
+# Crash dumps
+*.dmp
+
+# Ignore user-specific configs
+*.vscode/
