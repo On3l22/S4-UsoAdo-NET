@@ -51,6 +51,10 @@
             Menu = new ToolStripMenuItem();
             SubMenu_nuevo = new ToolStripMenuItem();
             SubMenu_guardar = new ToolStripMenuItem();
+            buscarToolStripMenuItem = new ToolStripMenuItem();
+            editarCtrlEToolStripMenuItem = new ToolStripMenuItem();
+            eliminarCtrlDToolStripMenuItem = new ToolStripMenuItem();
+            reportesCtrlRToolStripMenuItem = new ToolStripMenuItem();
             SubMenu_salir = new ToolStripMenuItem();
             MenuRegistros = new ToolStripMenuItem();
             SubMenuEstudiante = new ToolStripMenuItem();
@@ -71,11 +75,10 @@
             // 
             // tbxCedula
             // 
-            tbxCedula.Location = new Point(80, 64);
-            tbxCedula.Margin = new Padding(2, 2, 2, 2);
+            tbxCedula.Location = new Point(114, 107);
             tbxCedula.MaxLength = 11;
             tbxCedula.Name = "tbxCedula";
-            tbxCedula.Size = new Size(336, 23);
+            tbxCedula.Size = new Size(478, 31);
             tbxCedula.TabIndex = 0;
             tbxCedula.TextChanged += tbxCedula_TextChanged;
             tbxCedula.KeyPress += tbxCedula_KeyPress;
@@ -83,10 +86,9 @@
             // lblNombre
             // 
             lblNombre.AutoSize = true;
-            lblNombre.Location = new Point(19, 39);
-            lblNombre.Margin = new Padding(2, 0, 2, 0);
+            lblNombre.Location = new Point(27, 65);
             lblNombre.Name = "lblNombre";
-            lblNombre.Size = new Size(54, 15);
+            lblNombre.Size = new Size(82, 25);
             lblNombre.TabIndex = 1;
             lblNombre.Text = "Nombre:";
             // 
@@ -103,11 +105,9 @@
             groupBox1.Controls.Add(lblCarrera);
             groupBox1.Controls.Add(lblCedula);
             groupBox1.Controls.Add(lblNombre);
-            groupBox1.Location = new Point(24, 39);
-            groupBox1.Margin = new Padding(2, 2, 2, 2);
+            groupBox1.Location = new Point(34, 65);
             groupBox1.Name = "groupBox1";
-            groupBox1.Padding = new Padding(2, 2, 2, 2);
-            groupBox1.Size = new Size(435, 185);
+            groupBox1.Size = new Size(621, 308);
             groupBox1.TabIndex = 2;
             groupBox1.TabStop = false;
             groupBox1.Text = "Datos del alumno";
@@ -116,30 +116,27 @@
             // 
             cbx_Semestre.DropDownStyle = ComboBoxStyle.DropDownList;
             cbx_Semestre.FormattingEnabled = true;
-            cbx_Semestre.Location = new Point(80, 115);
-            cbx_Semestre.Margin = new Padding(2, 2, 2, 2);
+            cbx_Semestre.Location = new Point(114, 192);
             cbx_Semestre.Name = "cbx_Semestre";
-            cbx_Semestre.Size = new Size(336, 23);
+            cbx_Semestre.Size = new Size(478, 33);
             cbx_Semestre.TabIndex = 11;
             // 
             // cbxCarrera
             // 
             cbxCarrera.DropDownStyle = ComboBoxStyle.DropDownList;
             cbxCarrera.FormattingEnabled = true;
-            cbxCarrera.Location = new Point(80, 89);
-            cbxCarrera.Margin = new Padding(2, 2, 2, 2);
+            cbxCarrera.Location = new Point(114, 148);
             cbxCarrera.Name = "cbxCarrera";
-            cbxCarrera.Size = new Size(336, 23);
+            cbxCarrera.Size = new Size(478, 33);
             cbxCarrera.TabIndex = 10;
             cbxCarrera.SelectedIndexChanged += cbxCarrera_SelectedIndexChanged;
             // 
             // rbVespertina
             // 
             rbVespertina.AutoSize = true;
-            rbVespertina.Location = new Point(166, 146);
-            rbVespertina.Margin = new Padding(2, 2, 2, 2);
+            rbVespertina.Location = new Point(237, 243);
             rbVespertina.Name = "rbVespertina";
-            rbVespertina.Size = new Size(78, 19);
+            rbVespertina.Size = new Size(117, 29);
             rbVespertina.TabIndex = 9;
             rbVespertina.TabStop = true;
             rbVespertina.Text = "Verpertina";
@@ -148,10 +145,9 @@
             // rbMatutina
             // 
             rbMatutina.AutoSize = true;
-            rbMatutina.Location = new Point(80, 146);
-            rbMatutina.Margin = new Padding(2, 2, 2, 2);
+            rbMatutina.Location = new Point(114, 243);
             rbMatutina.Name = "rbMatutina";
-            rbMatutina.Size = new Size(73, 19);
+            rbMatutina.Size = new Size(107, 29);
             rbMatutina.TabIndex = 8;
             rbMatutina.TabStop = true;
             rbMatutina.Text = "Matutina";
@@ -159,51 +155,46 @@
             // 
             // tbxNombre
             // 
-            tbxNombre.Location = new Point(80, 35);
-            tbxNombre.Margin = new Padding(2, 2, 2, 2);
+            tbxNombre.Location = new Point(114, 58);
             tbxNombre.MaxLength = 30;
             tbxNombre.Name = "tbxNombre";
-            tbxNombre.Size = new Size(336, 23);
+            tbxNombre.Size = new Size(478, 31);
             tbxNombre.TabIndex = 2;
             tbxNombre.TextChanged += tbxNombre_TextChanged;
             // 
             // lblJornada
             // 
             lblJornada.AutoSize = true;
-            lblJornada.Location = new Point(22, 149);
-            lblJornada.Margin = new Padding(2, 0, 2, 0);
+            lblJornada.Location = new Point(31, 248);
             lblJornada.Name = "lblJornada";
-            lblJornada.Size = new Size(51, 15);
+            lblJornada.Size = new Size(78, 25);
             lblJornada.TabIndex = 5;
             lblJornada.Text = "Jornada:";
             // 
             // lblSemestre
             // 
             lblSemestre.AutoSize = true;
-            lblSemestre.Location = new Point(14, 120);
-            lblSemestre.Margin = new Padding(2, 0, 2, 0);
+            lblSemestre.Location = new Point(20, 200);
             lblSemestre.Name = "lblSemestre";
-            lblSemestre.Size = new Size(58, 15);
+            lblSemestre.Size = new Size(89, 25);
             lblSemestre.TabIndex = 4;
             lblSemestre.Text = "Semestre:";
             // 
             // lblCarrera
             // 
             lblCarrera.AutoSize = true;
-            lblCarrera.Location = new Point(26, 94);
-            lblCarrera.Margin = new Padding(2, 0, 2, 0);
+            lblCarrera.Location = new Point(37, 157);
             lblCarrera.Name = "lblCarrera";
-            lblCarrera.Size = new Size(48, 15);
+            lblCarrera.Size = new Size(72, 25);
             lblCarrera.TabIndex = 3;
             lblCarrera.Text = "Carrera:";
             // 
             // lblCedula
             // 
             lblCedula.AutoSize = true;
-            lblCedula.Location = new Point(27, 65);
-            lblCedula.Margin = new Padding(2, 0, 2, 0);
+            lblCedula.Location = new Point(39, 108);
             lblCedula.Name = "lblCedula";
-            lblCedula.Size = new Size(47, 15);
+            lblCedula.Size = new Size(70, 25);
             lblCedula.TabIndex = 2;
             lblCedula.Text = "Cédula:";
             // 
@@ -215,11 +206,9 @@
             groupBox2.Controls.Add(tbxConfirmacion);
             groupBox2.Controls.Add(tbxPassword);
             groupBox2.Controls.Add(tbxUsuario);
-            groupBox2.Location = new Point(476, 39);
-            groupBox2.Margin = new Padding(2, 2, 2, 2);
+            groupBox2.Location = new Point(680, 65);
             groupBox2.Name = "groupBox2";
-            groupBox2.Padding = new Padding(2, 2, 2, 2);
-            groupBox2.Size = new Size(345, 127);
+            groupBox2.Size = new Size(493, 212);
             groupBox2.TabIndex = 3;
             groupBox2.TabStop = false;
             groupBox2.Text = "Credenciales";
@@ -227,61 +216,55 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(24, 85);
-            label8.Margin = new Padding(2, 0, 2, 0);
+            label8.Location = new Point(34, 142);
             label8.Name = "label8";
-            label8.Size = new Size(83, 15);
+            label8.Size = new Size(122, 25);
             label8.TabIndex = 5;
             label8.Text = "Confirmación:";
             // 
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(36, 61);
-            label7.Margin = new Padding(2, 0, 2, 0);
+            label7.Location = new Point(51, 102);
             label7.Name = "label7";
-            label7.Size = new Size(70, 15);
+            label7.Size = new Size(105, 25);
             label7.TabIndex = 4;
             label7.Text = "Contraseña:";
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(56, 37);
-            label6.Margin = new Padding(2, 0, 2, 0);
+            label6.Location = new Point(80, 62);
             label6.Name = "label6";
-            label6.Size = new Size(50, 15);
+            label6.Size = new Size(76, 25);
             label6.TabIndex = 3;
             label6.Text = "Usuario:";
             // 
             // tbxConfirmacion
             // 
-            tbxConfirmacion.Location = new Point(113, 80);
-            tbxConfirmacion.Margin = new Padding(2, 2, 2, 2);
+            tbxConfirmacion.Location = new Point(161, 133);
             tbxConfirmacion.Name = "tbxConfirmacion";
             tbxConfirmacion.PasswordChar = '*';
-            tbxConfirmacion.Size = new Size(210, 23);
+            tbxConfirmacion.Size = new Size(298, 31);
             tbxConfirmacion.TabIndex = 2;
             tbxConfirmacion.TextChanged += tbxConfirmacion_TextChanged;
             // 
             // tbxPassword
             // 
-            tbxPassword.Location = new Point(113, 58);
-            tbxPassword.Margin = new Padding(2, 2, 2, 2);
+            tbxPassword.Location = new Point(161, 97);
             tbxPassword.MaxLength = 12;
             tbxPassword.Name = "tbxPassword";
             tbxPassword.PasswordChar = '*';
-            tbxPassword.Size = new Size(210, 23);
+            tbxPassword.Size = new Size(298, 31);
             tbxPassword.TabIndex = 1;
             // 
             // tbxUsuario
             // 
-            tbxUsuario.Location = new Point(113, 33);
-            tbxUsuario.Margin = new Padding(2, 2, 2, 2);
+            tbxUsuario.Location = new Point(161, 55);
             tbxUsuario.MaxLength = 30;
             tbxUsuario.Name = "tbxUsuario";
             tbxUsuario.ReadOnly = true;
-            tbxUsuario.Size = new Size(210, 23);
+            tbxUsuario.Size = new Size(298, 31);
             tbxUsuario.TabIndex = 0;
             // 
             // menuStrip1
@@ -290,36 +273,62 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { Menu, MenuRegistros, MenuAyuda });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Padding = new Padding(4, 1, 0, 1);
-            menuStrip1.Size = new Size(885, 24);
+            menuStrip1.Size = new Size(1264, 33);
             menuStrip1.TabIndex = 4;
             menuStrip1.Text = "menuStrip1";
             // 
             // Menu
             // 
-            Menu.DropDownItems.AddRange(new ToolStripItem[] { SubMenu_nuevo, SubMenu_guardar, SubMenu_salir });
+            Menu.DropDownItems.AddRange(new ToolStripItem[] { SubMenu_nuevo, SubMenu_guardar, buscarToolStripMenuItem, editarCtrlEToolStripMenuItem, eliminarCtrlDToolStripMenuItem, reportesCtrlRToolStripMenuItem, SubMenu_salir });
             Menu.Name = "Menu";
-            Menu.Size = new Size(60, 22);
+            Menu.Size = new Size(88, 29);
             Menu.Text = "Archivo";
             // 
             // SubMenu_nuevo
             // 
             SubMenu_nuevo.Name = "SubMenu_nuevo";
-            SubMenu_nuevo.Size = new Size(199, 22);
-            SubMenu_nuevo.Text = "Nuevo                Ctrl + N";
+            SubMenu_nuevo.Size = new Size(310, 34);
+            SubMenu_nuevo.Text = "Nuevo                ESC";
             SubMenu_nuevo.Click += SubMenu_nuevo_Click;
             // 
             // SubMenu_guardar
             // 
             SubMenu_guardar.Name = "SubMenu_guardar";
-            SubMenu_guardar.Size = new Size(199, 22);
+            SubMenu_guardar.Size = new Size(310, 34);
             SubMenu_guardar.Text = "Guardar              Ctrl + S";
             SubMenu_guardar.Click += SubMenu_guardar_Click;
+            // 
+            // buscarToolStripMenuItem
+            // 
+            buscarToolStripMenuItem.Name = "buscarToolStripMenuItem";
+            buscarToolStripMenuItem.Size = new Size(310, 34);
+            buscarToolStripMenuItem.Text = "Buscar                Ctrl + B";
+            buscarToolStripMenuItem.Click += buscarToolStripMenuItem_Click;
+            // 
+            // editarCtrlEToolStripMenuItem
+            // 
+            editarCtrlEToolStripMenuItem.Name = "editarCtrlEToolStripMenuItem";
+            editarCtrlEToolStripMenuItem.Size = new Size(310, 34);
+            editarCtrlEToolStripMenuItem.Text = "Editar                 Ctrl + E";
+            editarCtrlEToolStripMenuItem.Click += editarCtrlEToolStripMenuItem_Click;
+            // 
+            // eliminarCtrlDToolStripMenuItem
+            // 
+            eliminarCtrlDToolStripMenuItem.Name = "eliminarCtrlDToolStripMenuItem";
+            eliminarCtrlDToolStripMenuItem.Size = new Size(310, 34);
+            eliminarCtrlDToolStripMenuItem.Text = "Eliminar              Ctrl + D";
+            eliminarCtrlDToolStripMenuItem.Click += eliminarCtrlDToolStripMenuItem_Click;
+            // 
+            // reportesCtrlRToolStripMenuItem
+            // 
+            reportesCtrlRToolStripMenuItem.Name = "reportesCtrlRToolStripMenuItem";
+            reportesCtrlRToolStripMenuItem.Size = new Size(310, 34);
+            reportesCtrlRToolStripMenuItem.Text = "Reportes            Ctrl + R";
             // 
             // SubMenu_salir
             // 
             SubMenu_salir.Name = "SubMenu_salir";
-            SubMenu_salir.Size = new Size(199, 22);
+            SubMenu_salir.Size = new Size(310, 34);
             SubMenu_salir.Text = "Salir                    Ctrl + Q";
             SubMenu_salir.Click += SubMenu_salir_Click;
             // 
@@ -327,13 +336,13 @@
             // 
             MenuRegistros.DropDownItems.AddRange(new ToolStripItem[] { SubMenuEstudiante });
             MenuRegistros.Name = "MenuRegistros";
-            MenuRegistros.Size = new Size(67, 22);
+            MenuRegistros.Size = new Size(101, 29);
             MenuRegistros.Text = "Registros";
             // 
             // SubMenuEstudiante
             // 
             SubMenuEstudiante.Name = "SubMenuEstudiante";
-            SubMenuEstudiante.Size = new Size(134, 22);
+            SubMenuEstudiante.Size = new Size(204, 34);
             SubMenuEstudiante.Text = "Estudiantes";
             SubMenuEstudiante.Click += verRegistroToolStripMenuItem_Click;
             // 
@@ -341,35 +350,34 @@
             // 
             MenuAyuda.DropDownItems.AddRange(new ToolStripItem[] { SubMenuAcerca });
             MenuAyuda.Name = "MenuAyuda";
-            MenuAyuda.Size = new Size(53, 22);
+            MenuAyuda.Size = new Size(79, 29);
             MenuAyuda.Text = "Ayuda";
             // 
             // SubMenuAcerca
             // 
             SubMenuAcerca.DropDownItems.AddRange(new ToolStripItem[] { autoresOnelMOliverGToolStripMenuItem, version11aToolStripMenuItem });
             SubMenuAcerca.Name = "SubMenuAcerca";
-            SubMenuAcerca.Size = new Size(135, 22);
+            SubMenuAcerca.Size = new Size(203, 34);
             SubMenuAcerca.Text = "Acerca de...";
             // 
             // autoresOnelMOliverGToolStripMenuItem
             // 
             autoresOnelMOliverGToolStripMenuItem.Name = "autoresOnelMOliverGToolStripMenuItem";
-            autoresOnelMOliverGToolStripMenuItem.Size = new Size(224, 22);
+            autoresOnelMOliverGToolStripMenuItem.Size = new Size(338, 34);
             autoresOnelMOliverGToolStripMenuItem.Text = "Autores: Onel M. && Oliver G.";
             // 
             // version11aToolStripMenuItem
             // 
             version11aToolStripMenuItem.Name = "version11aToolStripMenuItem";
-            version11aToolStripMenuItem.Size = new Size(224, 22);
+            version11aToolStripMenuItem.Size = new Size(338, 34);
             version11aToolStripMenuItem.Text = "Version 1.1a";
             // 
             // chbx_Terminos
             // 
             chbx_Terminos.AutoSize = true;
-            chbx_Terminos.Location = new Point(476, 185);
-            chbx_Terminos.Margin = new Padding(2, 2, 2, 2);
+            chbx_Terminos.Location = new Point(680, 308);
             chbx_Terminos.Name = "chbx_Terminos";
-            chbx_Terminos.Size = new Size(292, 19);
+            chbx_Terminos.Size = new Size(435, 29);
             chbx_Terminos.TabIndex = 5;
             chbx_Terminos.Text = "Acepta los terminos y condiciones de la aplicación";
             chbx_Terminos.UseVisualStyleBackColor = true;
@@ -377,10 +385,9 @@
             // chbx_Notificaciones
             // 
             chbx_Notificaciones.AutoSize = true;
-            chbx_Notificaciones.Location = new Point(476, 206);
-            chbx_Notificaciones.Margin = new Padding(2, 2, 2, 2);
+            chbx_Notificaciones.Location = new Point(680, 343);
             chbx_Notificaciones.Name = "chbx_Notificaciones";
-            chbx_Notificaciones.Size = new Size(139, 19);
+            chbx_Notificaciones.Size = new Size(203, 29);
             chbx_Notificaciones.TabIndex = 6;
             chbx_Notificaciones.Text = "Recibir notificaciones";
             chbx_Notificaciones.UseVisualStyleBackColor = true;
@@ -388,11 +395,9 @@
             // groupBox3
             // 
             groupBox3.Controls.Add(dataGridView1);
-            groupBox3.Location = new Point(24, 250);
-            groupBox3.Margin = new Padding(2, 2, 2, 2);
+            groupBox3.Location = new Point(34, 417);
             groupBox3.Name = "groupBox3";
-            groupBox3.Padding = new Padding(2, 2, 2, 2);
-            groupBox3.Size = new Size(797, 187);
+            groupBox3.Size = new Size(1139, 312);
             groupBox3.TabIndex = 7;
             groupBox3.TabStop = false;
             groupBox3.Text = "Tabla de Registros";
@@ -400,20 +405,19 @@
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeight = 34;
-            dataGridView1.Location = new Point(0, 18);
-            dataGridView1.Margin = new Padding(2, 2, 2, 2);
+            dataGridView1.Location = new Point(0, 30);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
             dataGridView1.RowHeadersWidth = 62;
-            dataGridView1.Size = new Size(797, 169);
+            dataGridView1.Size = new Size(1139, 282);
             dataGridView1.TabIndex = 0;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
-            ClientSize = new Size(885, 449);
+            ClientSize = new Size(1264, 748);
             Controls.Add(groupBox3);
             Controls.Add(chbx_Notificaciones);
             Controls.Add(chbx_Terminos);
@@ -421,7 +425,6 @@
             Controls.Add(groupBox1);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
-            Margin = new Padding(2, 2, 2, 2);
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Formulario Principal";
@@ -475,5 +478,9 @@
         private DataGridView dataGridView1;
         private ToolStripMenuItem autoresOnelMOliverGToolStripMenuItem;
         private ToolStripMenuItem version11aToolStripMenuItem;
+        private ToolStripMenuItem editarCtrlEToolStripMenuItem;
+        private ToolStripMenuItem eliminarCtrlDToolStripMenuItem;
+        private ToolStripMenuItem reportesCtrlRToolStripMenuItem;
+        private ToolStripMenuItem buscarToolStripMenuItem;
     }
 }

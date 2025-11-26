@@ -1642,23 +1642,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\HP_15Tq\\.nuget\\packages\\": {},
+    "C:\\Users\\alexi\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\HP_15Tq\\Documents\\7d\\USO-ADO\\S4-UsoAdo-NET\\S4-Lab1-RegistroDeEstudiantes\\S4-UsoADO.csproj",
+      "projectUniqueName": "C:\\Users\\alexi\\Documents\\PROY_C#\\S4\\S4-UsoAdo-NET\\S4-Lab1-RegistroDeEstudiantes\\S4-UsoADO.csproj",
       "projectName": "S4-UsoADO",
-      "projectPath": "C:\\Users\\HP_15Tq\\Documents\\7d\\USO-ADO\\S4-UsoAdo-NET\\S4-Lab1-RegistroDeEstudiantes\\S4-UsoADO.csproj",
-      "packagesPath": "C:\\Users\\HP_15Tq\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\HP_15Tq\\Documents\\7d\\USO-ADO\\S4-UsoAdo-NET\\S4-Lab1-RegistroDeEstudiantes\\obj\\",
+      "projectPath": "C:\\Users\\alexi\\Documents\\PROY_C#\\S4\\S4-UsoAdo-NET\\S4-Lab1-RegistroDeEstudiantes\\S4-UsoADO.csproj",
+      "packagesPath": "C:\\Users\\alexi\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\alexi\\Documents\\PROY_C#\\S4\\S4-UsoAdo-NET\\S4-Lab1-RegistroDeEstudiantes\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\HP_15Tq\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\alexi\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],

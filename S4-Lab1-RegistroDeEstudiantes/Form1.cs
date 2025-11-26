@@ -790,22 +790,22 @@ namespace S4_Lab1_RegistroDeEstudiantes
                 e.SuppressKeyPress = true;
                 SubMenu_guardar_Click(sender, e);
             }
-            // ===== CTRL + E → Eliminar Registro =====
-            if (e.Control && e.KeyCode == Keys.E)
+            // ===== CTRL + D → Eliminar Registro =====
+            if (e.Control && e.KeyCode == Keys.D)
             {
                 e.SuppressKeyPress = true;
                 SubMenu_eliminar_Click(sender, e);
             }
 
-            // ===== CTRL + SHIFT + E → Editar Registro =====
-            if (e.Control && e.Shift && e.KeyCode == Keys.E)
+            // ===== CTRL + E → Editar Registro =====
+            if (e.Control && e.KeyCode == Keys.E)
             {
                 e.SuppressKeyPress = true;
                 SubMenu_editar_Click(sender, e);
             }
 
-            // ===== CTRL + N → Nuevo Registro (Limpiar) =====
-            if (e.Control && e.KeyCode == Keys.N)
+            // ===== ESC → Nuevo Registro (Limpiar) =====
+            if (e.KeyCode == Keys.Escape)
             {
                 e.SuppressKeyPress = true;
                 SubMenu_nuevo_Click(sender, e);
@@ -838,6 +838,21 @@ namespace S4_Lab1_RegistroDeEstudiantes
                     this.Close();
                 }
             }
+        }
+
+        private void editarCtrlEToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form1_KeyDown(sender, new KeyEventArgs(Keys.Control | Keys.E));
+        }
+
+        private void buscarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form1_KeyDown(sender, new KeyEventArgs(Keys.Control | Keys.B));
+        }
+
+        private void eliminarCtrlDToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form1_KeyDown(sender, new KeyEventArgs(Keys.Control | Keys.D));
         }
     }
 }
