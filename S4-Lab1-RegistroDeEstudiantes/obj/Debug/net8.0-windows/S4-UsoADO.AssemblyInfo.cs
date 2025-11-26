@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("S4-UsoADO")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dc42e0e71b24f8fdf18ecad8f269a14f2fb3b6de")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2d216ce5ebbe83cc4c000de4f8390ee6864859a1")]
 [assembly: System.Reflection.AssemblyProductAttribute("S4-UsoADO")]
 [assembly: System.Reflection.AssemblyTitleAttribute("S4-UsoADO")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
