@@ -4,6 +4,8 @@ using System.Text.Json;
 using System.Text.RegularExpressions;
 using JsonSerializer = System.Text.Json.JsonSerializer;
 
+using Microsoft.Data.SqlClient;
+
 namespace S4_Lab1_RegistroDeEstudiantes
 {
     public partial class Form1 : Form
@@ -187,6 +189,19 @@ namespace S4_Lab1_RegistroDeEstudiantes
             chbx_Notificaciones.Checked = false;
 
             tbxNombre.Focus();
+
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(conexionDB.connectionString))
+                {
+                    conn.Open();
+                    MessageBox.Show("Conexión exitosa.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al conectar: " + ex.Message);
+            }
         }
 
         //-- EVENTO DE MENU [GUARDAR] --------------------------------
@@ -195,7 +210,7 @@ namespace S4_Lab1_RegistroDeEstudiantes
         private void SubMenu_guardar_Click(object sender, EventArgs e)
         {
             // Guarda el nombre de usuario generado automáticamente
-            tbxUsuario.Text = tbxNombre.Text.Replace(" ","_") + tbxCedula.Text.Replace("-", "");
+            tbxUsuario.Text = tbxNombre.Text.Replace(" ", "_") + tbxCedula.Text.Replace("-", "");
 
             // ----- Validaciones de las entradas -----------
             if (string.IsNullOrWhiteSpace(tbxNombre.Text) ||
@@ -454,6 +469,11 @@ namespace S4_Lab1_RegistroDeEstudiantes
             {
                 tbxUsuario.Text = "";  // Solo se llena si ambos están completos
             }
+        }
+
+        private void tbxNombre_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

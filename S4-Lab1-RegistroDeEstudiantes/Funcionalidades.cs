@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
-internal class ListaDeEstudiantes
+namespace S4_Lab1_RegistroDeEstudiantes
 {
-    public List<Estudiante> estudiantes { get; set; }
-}
+    internal static class Funcionalidades
+    {
 
+    }
+}

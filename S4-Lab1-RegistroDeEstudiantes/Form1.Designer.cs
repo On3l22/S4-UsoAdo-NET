@@ -155,6 +155,7 @@
             tbxNombre.Name = "tbxNombre";
             tbxNombre.Size = new Size(479, 31);
             tbxNombre.TabIndex = 2;
+            tbxNombre.TextChanged += tbxNombre_TextChanged;
             // 
             // lblJornada
             // 
